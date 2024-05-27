@@ -10,7 +10,7 @@ class Member(models.Model):
   def __str__(self):
     return f"{self.firstname} {self.lastname}"
 
-class Post(models.Model):
+
     member = models.ForeignKey(Member, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     content = models.TextField()
